@@ -1,4 +1,11 @@
 class DateConvertor {
+    /**
+     * 
+     * @param {int} day 
+     * @param {int} month 
+     * @param {int} year 
+     * @returns {int} 
+     */
     static gregoryDate(day, month, year) {
         var a, b, c, d, e, f;
         const date = new Date(`${year}/${month}/${day}`)
@@ -22,7 +29,13 @@ class DateConvertor {
         f = parseInt(d + e + day + 0.5 + c - 1524.5)
         return f
     }
-
+    /**
+     * 
+     * @param {int} day 
+     * @param {int} month 
+     * @param {int} year 
+     * @returns {int} 
+     */
     static diferenceBetweenDays(day, month, year) {
         const
             today = new Date(),
@@ -36,6 +49,10 @@ class DateConvertor {
         return dateDiference2 - dateDiference1
     }
 
+    /**
+     * 
+     * @param {int} year 
+     */
     static leapYear(year) {
         if (year % 4 != 0) {
             if (year % 100 == 0 && year % 400 == 0) {
